@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
+dd(route('dashboard'), url(),env('APP_URL'));
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
